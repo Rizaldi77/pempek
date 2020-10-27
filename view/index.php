@@ -1,5 +1,4 @@
 <?php
-session_start();
 include('_partials/head.php');
 include('_partials/header.php');
 ?>
