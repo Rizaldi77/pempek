@@ -9,8 +9,8 @@ session_start();
       <a class="px-3 text-xl hover:text-red-700" href="#">Produk</a>
       <?php
       if (isset($_SESSION['username'])) { 
-        if(isset($_SESSION['role_id']) == 0) { ?>
-          <a class="px-1 text-xl hover:text-red-700" href="admin.php">Admin</a>
+        if(isset($_SESSION['role_id']) === 0) { ?>
+          <a class="px-1 text-xl hover:text-red-700" href="#">Admin</a>
        <?php } ?>
 
         <div x-data="{ open: false }">
@@ -22,8 +22,8 @@ session_start();
               x-show="open"
               @click.away="open = false"
           >
-            <a href="#" class="mb-1 hover:text-red-700">Profil</a>
-            <a href="actions/logout.php" class="dropdown-item hover:text-red-700">Logout</a>
+            <a href="#" class="block mb-1 hover:text-red-700">Profil</a>
+            <a href="actions/logout.php" class="block hover:text-red-700">Logout</a>
           </ul>
       </div>
       <?php } else {?>
